@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import "./footer.css";
+import logo from "@/assets/net-loss-logo.png";
 
 export default function Footer() {
   return (
@@ -15,8 +17,15 @@ export default function Footer() {
         <div className="site-footer__main">
 
           <div className="site-footer__brand">
+
             <div className="site-footer__icon">
-              🏸
+              <Image
+                src={logo}
+                alt="Anas at Net Loss"
+                width={32}
+                height={32}
+                className="site-footer__logo"
+              />
             </div>
 
             <div>
@@ -28,12 +37,14 @@ export default function Footer() {
                 THE GREAT SHUTTLECOCK HUNT
               </div>
             </div>
+
           </div>
 
           <p className="site-footer__description">
             Somewhere between a badminton match, a treasure hunt
             and getting completely lost.
           </p>
+
         </div>
 
         <nav className="site-footer__nav">

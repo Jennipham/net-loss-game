@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import "./page.css";
+import logo from "../assets/net-loss-logo.png";
 
 export default function HomePage() {
   return (
@@ -195,7 +197,13 @@ function AdventureMap() {
         <MapPin position="four" label="?" active />
 
         <div className="shuttlecock">
-          🏸
+             <Image
+              src={logo}
+              alt="Anas at Net Loss"
+              fill
+              sizes="44px"
+              priority
+            />
         </div>
 
         <div className="coordinates">
