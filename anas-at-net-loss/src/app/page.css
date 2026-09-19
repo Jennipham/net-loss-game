@@ -1,0 +1,1130 @@
+.home {
+  overflow: hidden;
+  background: #fffaf0;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 76px);
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.hero__background {
+  position: absolute;
+  inset: 0;
+
+  background-color: #fffaf0;
+
+  background-image:
+    linear-gradient(
+      rgba(16, 42, 67, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(16, 42, 67, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 40px 40px;
+}
+
+.hero__glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+.hero__glow--blue {
+  width: 500px;
+  height: 500px;
+
+  right: -180px;
+  top: 80px;
+
+  background: rgba(223, 243, 248, 0.8);
+}
+
+.hero__glow--yellow {
+  width: 350px;
+  height: 350px;
+
+  left: -180px;
+  bottom: -120px;
+
+  background: rgba(255, 243, 196, 0.7);
+}
+
+.hero__container {
+  position: relative;
+  z-index: 2;
+
+  width: min(100% - 40px, 1280px);
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+
+  align-items: center;
+
+  gap: 50px;
+
+  padding: 90px 0 110px;
+}
+
+.hero__content {
+  max-width: 650px;
+}
+
+.hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 28px;
+
+  color: #168aad;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 0.25em;
+}
+
+.hero__eyebrow span {
+  width: 40px;
+  height: 1px;
+
+  background: #f5b51b;
+}
+
+/* Heading */
+
+.hero__title {
+  margin: 0;
+
+  color: #102a43;
+
+  font-family: "Ahkio", sans-serif;
+
+  font-size: clamp(4.2rem, 8vw, 7.25rem);
+
+  font-weight: 400;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.045em;
+}
+
+.hero__title span {
+  display: block;
+
+  color: #df3d58;
+}
+
+.hero__title strong {
+  display: block;
+
+  font-weight: 700;
+}
+
+/* Description */
+
+.hero__description {
+  max-width: 560px;
+
+  margin: 34px 0 0;
+
+  color: #627d98;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+.hero__description strong {
+  color: #020c45;
+}
+
+/* Buttons */
+
+.hero__actions {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 34px;
+}
+
+.hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-height: 50px;
+
+  padding: 0 24px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    background 200ms ease;
+}
+
+.hero__button:hover {
+  transform: translateY(-2px);
+}
+
+.hero__button--primary {
+  background: #102a43;
+
+  color: white;
+
+  box-shadow: 0 10px 25px rgba(16, 42, 67, 0.16);
+}
+
+.hero__button--primary:hover {
+  box-shadow: 0 14px 30px rgba(16, 42, 67, 0.22);
+}
+
+.hero__button--secondary {
+  border: 1px solid rgba(16, 42, 67, 0.12);
+
+  background: rgba(255, 255, 255, 0.65);
+
+  color: #102a43;
+
+  backdrop-filter: blur(10px);
+}
+
+/* Stats */
+
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  max-width: 430px;
+
+  margin-top: 48px;
+  padding-top: 24px;
+
+  border-top: 1px solid rgba(16, 42, 67, 0.1);
+}
+
+.hero__stats div {
+  padding-right: 20px;
+}
+
+.hero__stats div + div {
+  padding-left: 20px;
+
+  border-left: 1px solid rgba(16, 42, 67, 0.1);
+}
+
+.hero__stats strong {
+  display: block;
+
+  color: #102a43;
+
+  font-family: "Ahkio", sans-serif;
+
+  font-size: 38px;
+
+  line-height: 1;
+}
+
+.hero__stats div:last-child strong {
+  color: #168aad;
+}
+
+.hero__stats span {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #627d98;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   ADVENTURE MAP
+========================================================= */
+
+.adventure-map {
+  position: relative;
+
+  width: 100%;
+  max-width: 580px;
+
+  margin: 0 auto;
+}
+
+.adventure-map__card {
+  position: relative;
+
+  aspect-ratio: 1;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(16, 42, 67, 0.1);
+
+  border-radius: 40px;
+
+  background: #dff3f8;
+
+  box-shadow:
+    0 25px 60px rgba(16, 42, 67, 0.1),
+    0 5px 15px rgba(16, 42, 67, 0.05);
+}
+
+.adventure-map__dots {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.4;
+
+  background-image: radial-gradient(
+    rgba(16, 42, 67, 0.13) 1px,
+    transparent 1px
+  );
+
+  background-size: 18px 18px;
+}
+
+/* Globe */
+
+.globe {
+  position: absolute;
+
+  width: 72%;
+  aspect-ratio: 1;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border: 1.5px solid rgba(22, 138, 173, 0.25);
+
+  border-radius: 50%;
+
+  background: rgba(255, 250, 240, 0.4);
+
+  box-shadow:
+    inset 0 0 60px rgba(22, 138, 173, 0.08);
+}
+
+.globe__longitude {
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  width: 42%;
+  height: 100%;
+
+  transform: translateX(-50%);
+
+  border-right: 1px solid rgba(22, 138, 173, 0.15);
+  border-left: 1px solid rgba(22, 138, 173, 0.15);
+
+  border-radius: 50%;
+}
+
+.globe__latitude {
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  width: 100%;
+  height: 35%;
+
+  transform: translateY(-50%);
+
+  border-top: 1px solid rgba(22, 138, 173, 0.15);
+  border-bottom: 1px solid rgba(22, 138, 173, 0.15);
+
+  border-radius: 50%;
+}
+
+.globe__equator {
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  width: 100%;
+  height: 1px;
+
+  background: rgba(22, 138, 173, 0.1);
+}
+
+/* Abstract continents */
+
+.continent {
+  position: absolute;
+
+  background: rgba(22, 138, 173, 0.15);
+}
+
+.continent--one {
+  left: 17%;
+  top: 23%;
+
+  width: 27%;
+  height: 18%;
+
+  transform: rotate(-12deg);
+
+  border-radius: 45% 55% 35% 65%;
+}
+
+.continent--two {
+  left: 45%;
+  top: 25%;
+
+  width: 19%;
+  height: 13%;
+
+  transform: rotate(20deg);
+
+  border-radius: 60% 40% 55% 45%;
+}
+
+.continent--three {
+  left: 50%;
+  top: 45%;
+
+  width: 17%;
+  height: 27%;
+
+  transform: rotate(12deg);
+
+  border-radius: 45% 55% 60% 40%;
+}
+
+.continent--four {
+  left: 22%;
+  top: 50%;
+
+  width: 14%;
+  height: 22%;
+
+  transform: rotate(-15deg);
+
+  border-radius: 60% 40% 50% 50%;
+}
+
+/* Route */
+
+.route {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.route path {
+  stroke: #102a43;
+
+  stroke-width: 3;
+
+  stroke-dasharray: 9 10;
+
+  opacity: 0.45;
+
+  fill: none;
+}
+
+/* Pins */
+
+.map-pin {
+  position: absolute;
+  z-index: 3;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translate(-50%, -50%);
+
+  border: 4px solid white;
+
+  border-radius: 50%;
+
+  background: #102a43;
+
+  color: white;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  box-shadow: 0 8px 18px rgba(16, 42, 67, 0.2);
+}
+
+.map-pin--one {
+  left: 19%;
+  top: 69%;
+}
+
+.map-pin--two {
+  left: 46%;
+  top: 56%;
+}
+
+.map-pin--three {
+  left: 78%;
+  top: 44%;
+}
+
+.map-pin--four {
+  left: 71%;
+  top: 65%;
+}
+
+.map-pin--active {
+  background: #f5b51b;
+
+  color: #102a43;
+
+  animation: pin-pulse 2s ease-in-out infinite;
+}
+
+@keyframes pin-pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.12);
+  }
+}
+
+/* Shuttlecock */
+
+.shuttlecock {
+  position: absolute;
+
+  right: 8%;
+  top: 10%;
+
+  width: 76px;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: white;
+
+  font-size: 38px;
+
+  box-shadow: 0 12px 30px rgba(16, 42, 67, 0.15);
+
+  animation: shuttle-float 4s ease-in-out infinite;
+}
+
+@keyframes shuttle-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(12deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(16deg);
+  }
+}
+
+/* Coordinates */
+
+.coordinates {
+  position: absolute;
+
+  left: 28px;
+  bottom: 28px;
+
+  padding: 13px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  box-shadow: 0 8px 20px rgba(16, 42, 67, 0.1);
+
+  backdrop-filter: blur(12px);
+}
+
+.coordinates span {
+  display: block;
+
+  color: #627d98;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 0.2em;
+}
+
+.coordinates strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #102a43;
+
+  font-family: monospace;
+
+  font-size: 12px;
+}
+
+/* Status */
+
+.location-status {
+  position: absolute;
+
+  right: 28px;
+  bottom: 28px;
+
+  padding: 9px 14px;
+
+  border-radius: 999px;
+
+  background: #f5b51b;
+
+  color: #102a43;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 0.15em;
+}
+
+.mission-status {
+  position: absolute;
+
+  left: 30px;
+  bottom: -22px;
+
+  padding: 14px 20px;
+
+  border: 1px solid rgba(16, 42, 67, 0.1);
+
+  border-radius: 16px;
+
+  background: #fffaf0;
+
+  box-shadow: 0 12px 30px rgba(16, 42, 67, 0.12);
+}
+
+.mission-status > span {
+  display: block;
+
+  color: #627d98;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 0.2em;
+}
+
+.mission-status strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 5px;
+
+  color: #102a43;
+
+  font-size: 13px;
+}
+
+.mission-status i {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #f5b51b;
+
+  animation: status-pulse 2s ease-in-out infinite;
+}
+
+@keyframes status-pulse {
+  50% {
+    opacity: 0.4;
+    transform: scale(1.4);
+  }
+}
+
+/* =========================================================
+   MISSIONS
+========================================================= */
+
+.missions {
+  background: white;
+
+  padding: 120px 0;
+}
+
+.missions__container {
+  width: min(100% - 40px, 1280px);
+
+  margin: 0 auto;
+}
+
+.missions__heading {
+  max-width: 600px;
+
+  margin-bottom: 48px;
+}
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #168aad;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 0.25em;
+}
+
+.section-eyebrow span {
+  width: 40px;
+  height: 1px;
+
+  background: #f5b51b;
+}
+
+.missions__heading h2 {
+  margin: 16px 0 0;
+
+  color: #102a43;
+
+  font-family: "Ahkio", sans-serif;
+
+  font-size: clamp(3rem, 6vw, 5rem);
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.035em;
+}
+
+.missions__heading h2 span {
+  display: block;
+
+  color: #168aad;
+}
+
+.mission-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.mission-card {
+  position: relative;
+
+  min-height: 300px;
+
+  overflow: hidden;
+
+  padding: 30px;
+
+  border: 1px solid rgba(16, 42, 67, 0.1);
+
+  border-radius: 28px;
+
+  background: #fffaf0;
+
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 20px 40px rgba(16, 42, 67, 0.1);
+}
+
+.mission-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mission-card__top span {
+  color: #627d98;
+
+  font-family: monospace;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mission-card__top strong {
+  color: #168aad;
+
+  font-family: "Ahkio", sans-serif;
+
+  font-size: 22px;
+}
+
+.mission-card__body {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 70px;
+}
+
+.mission-card h3 {
+  margin: 0;
+
+  color: #102a43;
+
+  font-family: "Ahkio", sans-serif;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.mission-card p {
+  max-width: 320px;
+
+  margin: 10px 0 0;
+
+  color: #627d98;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.mission-card__shape {
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  right: -50px;
+  bottom: -50px;
+
+  border-radius: 50%;
+
+  background: #dff3f8;
+
+  transition: transform 400ms ease;
+}
+
+.mission-card:hover .mission-card__shape {
+  transform: scale(1.4);
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.home-cta {
+  position: relative;
+
+  overflow: hidden;
+
+  background: #102a43;
+
+  color: white;
+}
+
+.home-cta__background {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.05;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+}
+
+.home-cta__content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 120px 20px;
+
+  text-align: center;
+}
+
+.home-cta__content p {
+  margin: 0;
+
+  color: #f5b51b;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 0.3em;
+}
+
+.home-cta h2 {
+  margin: 20px 0 34px;
+
+  font-family: "Ahkio", sans-serif;
+
+  font-size: clamp(3.5rem, 7vw, 6rem);
+
+  font-weight: 400;
+
+  line-height: 0.86;
+
+  letter-spacing: -0.035em;
+}
+
+.home-cta h2 span {
+  display: block;
+
+  color: #62c5df;
+}
+
+.home-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px 26px;
+
+  border-radius: 999px;
+
+  background: #f5b51b;
+
+  color: #102a43;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  text-decoration: none;
+
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.home-cta a:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .hero__container {
+    grid-template-columns: 1fr;
+
+    padding: 80px 0 110px;
+  }
+
+  .hero__content {
+    max-width: 700px;
+  }
+
+  .adventure-map {
+    max-width: 600px;
+  }
+
+  .mission-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-card {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero__container {
+    width: min(100% - 28px, 1280px);
+
+    gap: 70px;
+
+    padding: 60px 0 90px;
+  }
+
+  .hero__eyebrow {
+    margin-bottom: 22px;
+
+    font-size: 8px;
+  }
+
+  .hero__title {
+    font-size: clamp(4rem, 19vw, 5.5rem);
+
+    letter-spacing: -0.055em;
+  }
+
+  .hero__description {
+    margin-top: 26px;
+
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .hero__button {
+    width: 100%;
+  }
+
+  .hero__stats {
+    margin-top: 38px;
+  }
+
+  .hero__stats strong {
+    font-size: 31px;
+  }
+
+  .hero__stats span {
+    font-size: 8px;
+  }
+
+  .adventure-map__card {
+    border-radius: 28px;
+  }
+
+  .shuttlecock {
+    width: 58px;
+    height: 58px;
+
+    font-size: 28px;
+  }
+
+  .coordinates {
+    left: 16px;
+    bottom: 16px;
+
+    padding: 10px 12px;
+  }
+
+  .coordinates strong {
+    font-size: 9px;
+  }
+
+  .location-status {
+    right: 16px;
+    bottom: 16px;
+
+    padding: 7px 9px;
+
+    font-size: 7px;
+  }
+
+  .mission-status {
+    left: 16px;
+
+    bottom: -20px;
+
+    padding: 11px 14px;
+  }
+
+  .missions {
+    padding: 90px 0;
+  }
+
+  .missions__container {
+    width: min(100% - 28px, 1280px);
+  }
+
+  .missions__heading h2 {
+    font-size: 3.5rem;
+  }
+
+  .mission-card {
+    min-height: 270px;
+
+    padding: 24px;
+
+    border-radius: 24px;
+  }
+
+  .mission-card__body {
+    margin-top: 55px;
+  }
+
+  .home-cta__content {
+    padding: 90px 20px;
+  }
+
+  .home-cta h2 {
+    font-size: 3.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-pin--active,
+  .shuttlecock,
+  .mission-status i {
+    animation: none;
+  }
+
+  .hero__button,
+  .mission-card {
+    transition: none;
+  }
+}

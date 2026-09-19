@@ -1,0 +1,219 @@
+.site-footer {
+  position: relative;
+
+  overflow: hidden;
+
+  background: #071b2f;
+
+  color: white;
+}
+
+.site-footer__inner {
+  position: relative;
+  z-index: 2;
+
+  width: min(100% - 40px, 1280px);
+
+  margin: 0 auto;
+
+  padding: 64px 0;
+}
+
+.site-footer__main {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 48px;
+}
+
+/* Brand */
+
+.site-footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.site-footer__icon {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: #fffaf0;
+
+  font-size: 26px;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.site-footer__name {
+  font-family: "Ahkio", sans-serif;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  letter-spacing: 0.03em;
+}
+
+.site-footer__tagline {
+  margin-top: 5px;
+
+  color: #f5b51b;
+
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+}
+
+.site-footer__description {
+  max-width: 390px;
+
+  margin: 24px 0 0;
+
+  color: #94a7b8;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Navigation */
+
+.site-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.site-footer__nav a {
+  color: #94a7b8;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: color 200ms ease;
+}
+
+.site-footer__nav a:hover {
+  color: white;
+}
+
+/* Bottom */
+
+.site-footer__bottom {
+  position: relative;
+  z-index: 2;
+
+  width: min(100% - 40px, 1280px);
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 24px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: #627d98;
+
+  font-size: 11px;
+}
+
+/* Decorative map */
+
+.site-footer__grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.035;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+
+  background-size: 42px 42px;
+}
+
+.site-footer__circle {
+  position: absolute;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+}
+
+.site-footer__circle--large {
+  width: 500px;
+  height: 500px;
+
+  right: -250px;
+  top: -250px;
+}
+
+.site-footer__circle--small {
+  width: 320px;
+  height: 320px;
+
+  right: -160px;
+  top: -160px;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .site-footer__inner {
+    width: min(100% - 32px, 1280px);
+
+    padding: 52px 0;
+  }
+
+  .site-footer__main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-footer__nav {
+    gap: 18px 24px;
+  }
+
+  .site-footer__bottom {
+    width: min(100% - 32px, 1280px);
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-footer__brand {
+    align-items: flex-start;
+  }
+
+  .site-footer__icon {
+    width: 48px;
+    height: 48px;
+
+    font-size: 22px;
+  }
+
+  .site-footer__name {
+    font-size: 17px;
+  }
+
+  .site-footer__tagline {
+    font-size: 8px;
+  }
+
+  .site-footer__description {
+    font-size: 13px;
+  }
+}

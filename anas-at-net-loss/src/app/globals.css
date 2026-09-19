@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+/* =========================================================
+   AHkIO FONT
+========================================================= */
+
+@font-face {
+  font-family: "Ahkio";
+  src: url("/fonts/Ahkio-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ahkio";
+  src: url("/fonts/Ahkio-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* =========================================================
+   DESIGN TOKENS
+========================================================= */
+
+:root {
+  /* Brand colours */
+  --navy: #020c45;
+  --pink: #df3d58;
+  --grey: #e6e7e7;
+  --yellow: #ffbd59;
+
+  /* Supporting colours */
+  --white: #ffffff;
+  --off-white: #fafafa;
+  --text-muted: #667085;
+
+  /* Borders */
+  --border-light: rgba(2, 12, 69, 0.1);
+  --border-medium: rgba(2, 12, 69, 0.16);
+
+  /* Shadows */
+  --shadow-soft: 0 10px 30px rgba(2, 12, 69, 0.08);
+  --shadow-card: 0 20px 50px rgba(2, 12, 69, 0.1);
+}
+
+
+/* =========================================================
+   TAILWIND THEME
+========================================================= */
+
+@theme {
+  --color-navy: #020c45;
+  --color-pink: #df3d58;
+  --color-grey: #e6e7e7;
+  --color-yellow: #ffbd59;
+
+  --color-off-white: #fafafa;
+  --color-muted: #667085;
+
+  --font-display: "Ahkio", sans-serif;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: var(--off-white);
+  color: var(--navy);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--yellow);
+  color: var(--navy);
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   RESPONSIVE / REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
