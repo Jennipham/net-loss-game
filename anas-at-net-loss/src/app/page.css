@@ -258,7 +258,7 @@
 
   margin-top: 7px;
 
-  color: #627d98;
+  color: black;
 
   font-size: 9px;
   font-weight: 900;
@@ -522,43 +522,6 @@
   }
 }
 
-/* Shuttlecock */
-
-.shuttlecock {
-  position: absolute;
-
-  right: 8%;
-  top: 10%;
-
-  width: 76px;
-  height: 76px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 20px;
-
-  background: white;
-
-  font-size: 38px;
-
-  box-shadow: 0 12px 30px rgba(16, 42, 67, 0.15);
-
-  animation: shuttle-float 4s ease-in-out infinite;
-}
-
-@keyframes shuttle-float {
-  0%,
-  100% {
-    transform: translateY(0) rotate(12deg);
-  }
-
-  50% {
-    transform: translateY(-10px) rotate(16deg);
-  }
-}
-
 /* Coordinates */
 
 .coordinates {
@@ -623,64 +586,6 @@
   font-weight: 900;
 
   letter-spacing: 0.15em;
-}
-
-.mission-status {
-  position: absolute;
-
-  left: 30px;
-  bottom: -22px;
-
-  padding: 14px 20px;
-
-  border: 1px solid rgba(16, 42, 67, 0.1);
-
-  border-radius: 16px;
-
-  background: #fffaf0;
-
-  box-shadow: 0 12px 30px rgba(16, 42, 67, 0.12);
-}
-
-.mission-status > span {
-  display: block;
-
-  color: #627d98;
-
-  font-size: 8px;
-  font-weight: 900;
-
-  letter-spacing: 0.2em;
-}
-
-.mission-status strong {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  margin-top: 5px;
-
-  color: #102a43;
-
-  font-size: 13px;
-}
-
-.mission-status i {
-  width: 7px;
-  height: 7px;
-
-  border-radius: 50%;
-
-  background: #f5b51b;
-
-  animation: status-pulse 2s ease-in-out infinite;
-}
-
-@keyframes status-pulse {
-  50% {
-    opacity: 0.4;
-    transform: scale(1.4);
-  }
 }
 
 /* =========================================================

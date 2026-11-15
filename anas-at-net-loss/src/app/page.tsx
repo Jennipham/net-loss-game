@@ -7,7 +7,6 @@ export default function HomePage() {
   return (
     <main className="home">
 
-      {/* Hero */}
       <section className="hero">
 
         <div className="hero__background" />
@@ -31,7 +30,7 @@ export default function HomePage() {
 
             <p className="hero__description">
               <span>
-                Anas has lost his badminton shuttlecocks across the globe (silly guy!)
+                Anas has lost his badminton shuttlecocks!
               </span>
 
               <strong>
@@ -65,13 +64,13 @@ export default function HomePage() {
               </div>
 
               <div>
-                <strong>∞</strong>
-                <span>The world</span>
+                <strong>🌍</strong>
+                <span>Around The world</span>
               </div>
 
               <div>
-                <strong>?</strong>
-                <span>Shuttles</span>
+                <strong> 🏸</strong>
+                <span>10 Shuttles</span>
               </div>
 
             </div>
@@ -95,8 +94,7 @@ export default function HomePage() {
             </div>
 
             <h2>
-              THREE ROUNDS.
-              <span>ONE DESTINATION.</span>
+              <span>THREE CHALLENGES</span>
             </h2>
           </div>
 
@@ -104,7 +102,7 @@ export default function HomePage() {
 
             <MissionCard
               number="01"
-              title="What3Words"
+              title="Three Little Words"
               icon="///"
               description="Solve the clues. Combine the answers. Discover a location hidden in three little words."
             />
@@ -128,17 +126,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="home-cta">
 
         <div className="home-cta__background" />
 
         <div className="home-cta__content">
-          <p>YOUR MISSION AWAITS</p>
-
           <h2>
             READY TO FIND
-            <span>WHAT ANAS LOST?</span>
+            <span>ANAS' BIRDIES?</span>
           </h2>
 
           <Link href="/race-day">
@@ -152,11 +147,6 @@ export default function HomePage() {
     </main>
   );
 }
-
-
-/* -------------------------------------------------------------
-   Adventure Map
-------------------------------------------------------------- */
 
 function AdventureMap() {
   return (
@@ -173,54 +163,16 @@ function AdventureMap() {
           className="globe"
         />
 
-        <div className="shuttlecock">
-          🏸
-        </div>
-
         <div className="coordinates">
-          <span>LAST KNOWN SIGNAL</span>
+          <span>LAST KNOWN LOCATION</span>
           <strong>51.41966° N, 0.19452° W</strong>
         </div>
 
-        <div className="location-status">
-          LOCATION UNKNOWN
-        </div>
-
-      </div>
-
-      <div className="mission-status">
-        <span>MISSION STATUS</span>
-
-        <strong>
-          <i />
-          Hunt in progress
-        </strong>
       </div>
 
     </div>
   );
 }
-
-
-function MapPin({
-  position,
-  label,
-  active = false,
-}: {
-  position: string;
-  label: string;
-  active?: boolean;
-}) {
-  return (
-    <div
-      className={`map-pin map-pin--${position} ${active ? "map-pin--active" : ""
-        }`}
-    >
-      {label}
-    </div>
-  );
-}
-
 
 function MissionCard({
   number,

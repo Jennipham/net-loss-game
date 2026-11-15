@@ -1,6 +1,7 @@
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import "./globals.css";
+import ScrollToTop from "@/components/Utility/ScrollToTop/ScrollToTop";
 
 export default function RootLayout({
   children,
@@ -11,6 +12,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
+        <ScrollToTop />
         {children}
         <Footer />
       </body>
