@@ -21,7 +21,7 @@
   position: absolute;
   inset: 0;
 
-  background-color: #fffaf0;
+  background-color: #4e91af;
 
   background-image:
     linear-gradient(
@@ -96,7 +96,7 @@
 
   margin-bottom: 28px;
 
-  color: #168aad;
+  color: WHITE;
 
   font-size: 10px;
   font-weight: 900;
@@ -132,7 +132,7 @@
 .hero__title span {
   display: block;
 
-  color: #df3d58;
+  color: white;
 }
 
 .hero__title strong {
@@ -144,15 +144,10 @@
 /* Description */
 
 .hero__description {
-  max-width: 560px;
-
-  margin: 34px 0 0;
-
-  color: #627d98;
-
-  font-size: 17px;
-
-  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
 }
 
 .hero__description strong {
@@ -324,21 +319,14 @@
   position: absolute;
 
   width: 72%;
-  aspect-ratio: 1;
+  height: auto;
 
   left: 50%;
   top: 50%;
 
   transform: translate(-50%, -50%);
 
-  border: 1.5px solid rgba(22, 138, 173, 0.25);
-
-  border-radius: 50%;
-
-  background: rgba(255, 250, 240, 0.4);
-
-  box-shadow:
-    inset 0 0 60px rgba(22, 138, 173, 0.08);
+  object-fit: contain;
 }
 
 .globe__longitude {

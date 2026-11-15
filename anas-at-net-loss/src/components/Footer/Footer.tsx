@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import "./footer.css";
-import logo from "@/assets/net-loss-logo.png";
+import logo from "@/assets/no-birdies-logo.png";
 
 export default function Footer() {
   return (
@@ -34,7 +34,7 @@ export default function Footer() {
               </div>
 
               <div className="site-footer__tagline">
-                THE GREAT SHUTTLECOCK HUNT
+                By Jennifer Pham
               </div>
             </div>
 
@@ -56,7 +56,7 @@ export default function Footer() {
       </div>
 
       <div className="site-footer__bottom">
-        <span>🌎 The world is your court.</span>
+        <span></span>
         <span>Made for Anas · 2026</span>
       </div>
 

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import "./page.css";
-import logo from "../assets/net-loss-logo.png";
+import logo from "../assets/no-birdies-logo.png";
 
 export default function HomePage() {
   return (
@@ -20,21 +20,24 @@ export default function HomePage() {
 
             <div className="hero__eyebrow">
               <span />
-              MISSION 01 · THE GREAT HUNT
+              RACE TO COMPLETE THE PUZZLES
             </div>
 
             <h1 className="hero__title">
-              ANAS
-              <span>IS AT</span>
-              <strong>NET LOSS.</strong>
+              CAN YOU
+              <span>FIND ANAS'</span>
+              <strong>BIRDIES?</strong>
             </h1>
 
             <p className="hero__description">
-              Somewhere out there, Anas has lost his badminton
-              shuttlecocks. Across the world.
-              <strong>Your mission is simple: find them.</strong>
-            </p>
+              <span>
+                Anas has lost his badminton shuttlecocks across the globe (silly guy!)
+              </span>
 
+              <strong>
+                Race to complete the puzzles to locate them.
+              </strong>
+            </p>
             <div className="hero__actions">
 
               <Link
@@ -161,54 +164,22 @@ function AdventureMap() {
 
       <div className="adventure-map__card">
 
-        <div className="adventure-map__dots" />
-
-        <div className="globe">
-
-          <div className="globe__longitude" />
-          <div className="globe__latitude" />
-          <div className="globe__equator" />
-
-          <div className="continent continent--one" />
-          <div className="continent continent--two" />
-          <div className="continent continent--three" />
-          <div className="continent continent--four" />
-
-        </div>
-
-        <svg
-          className="route"
-          viewBox="0 0 600 600"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M115 415 C175 340, 205 405, 275 335 S375 220, 470 265"
-          />
-
-          <path
-            d="M470 265 C500 285, 490 340, 425 390"
-          />
-        </svg>
-
-        <MapPin position="one" label="01" />
-        <MapPin position="two" label="02" />
-        <MapPin position="three" label="03" />
-        <MapPin position="four" label="?" active />
+        <Image
+          src={logo}
+          alt="Anas at Net Loss"
+          width={1000}
+          height={1000}
+          priority
+          className="globe"
+        />
 
         <div className="shuttlecock">
-             <Image
-              src={logo}
-              alt="Anas at Net Loss"
-              fill
-              sizes="44px"
-              priority
-            />
+          🏸
         </div>
 
         <div className="coordinates">
           <span>LAST KNOWN SIGNAL</span>
-          <strong>51.5074° N · 0.1278° W</strong>
+          <strong>51.41966° N, 0.19452° W</strong>
         </div>
 
         <div className="location-status">
@@ -242,9 +213,8 @@ function MapPin({
 }) {
   return (
     <div
-      className={`map-pin map-pin--${position} ${
-        active ? "map-pin--active" : ""
-      }`}
+      className={`map-pin map-pin--${position} ${active ? "map-pin--active" : ""
+        }`}
     >
       {label}
     </div>

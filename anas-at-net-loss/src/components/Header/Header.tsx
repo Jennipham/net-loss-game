@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import logo from "../../assets/net-loss-logo.png"; 
+import logo from "../../assets/no-birdies-logo.png"; 
 import "./header.css";
 
 const navItems = [
@@ -44,7 +44,7 @@ export default function Header() {
           <div className="site-header__brand-text">
             <span className="site-header__name">ANAS</span>
             <span className="site-header__tagline">
-              AT NET LOSS
+              HAS NO BIRDIES
             </span>
           </div>
         </Link>
